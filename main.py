@@ -1,3 +1,5 @@
+# Para rodar: uvicorn main:app --reload
+# http://127.0.0.1:8000/docs
 import os
 import re
 import uuid
@@ -251,6 +253,3 @@ def return_item(item_id: str):
 @app.get("/health")
 def health():
     return {"status": "ok", "storage": "mongo" if USE_MONGO else "memory"}
-
-# Para rodar: uvicorn main:app --reload
-# http://127.0.0.1:8000/docs
